@@ -46,8 +46,8 @@ function CarInfo() {
         .then((res) => {
           if (res.data.message === "success") {
             Swal.fire({
-              title: "Save",
-              text: "Saved",
+              title: "บันทึกข้อมูล",
+              text: "บันทึกข้อมูลเรียบร้อยแล้ว",
               icon: "success",
               timer: 2000,
             });
@@ -126,13 +126,11 @@ function CarInfo() {
     <>
       <div className="card">
         <div className="card-header">
-          <div className="card-title text-center fs-3">
-            ข้อมูลรถยนต์ของ บริษัท ฮ้อปคาร์ จำกัด
-          </div>
+          <div className="card-title text-center fs-3">ข้อมูลรถยนต์ของ บริษัท ฮ้อปคาร์ จำกัด</div>
         </div>
         <div className="card-body">
           <button onClick={clearForm} data-bs-toggle="modal" data-bs-target="#modalCarInfo" className="btn btn-primary">
-            Add list
+            เพิ่มข้อมูลรถยนต์
           </button>
 
           <table className="mt-3 table table-bordered table-striped">
@@ -193,7 +191,7 @@ function CarInfo() {
         </div>
         <div className="mt-3">
           <button onClick={handleSave} className="btn btn-primary">
-            Save
+            บันทึกข้อมูล
           </button>
         </div>
       </Modal>
